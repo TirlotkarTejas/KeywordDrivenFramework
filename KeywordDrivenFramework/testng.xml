@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="AutomationSuite">
+    <test name="AutomationTests">
+        <classes>
+        <class name="com.keywordframework.tests.TestExecutor"/>
+            <!-- <class name="com.keywordframework.tests.TestExecutor"/> -->
+            <class name="com.keywordframework.tests.TestExecutor2"/>
+        </classes>
+    </test>
+</suite>
