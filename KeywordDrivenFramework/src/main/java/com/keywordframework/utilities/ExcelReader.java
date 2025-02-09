@@ -21,7 +21,15 @@ public class ExcelReader {
 	            Workbook workbook = WorkbookFactory.create(file);
 	            Sheet sheet = workbook.getSheet(sheetName);
 	            
+	            boolean skipHeader = true;
+	            
 	            for (Row row : sheet) {
+	            	
+	            	if (skipHeader) { 
+	                    skipHeader = false; // Skip first row and continue
+	                    continue;
+	                }
+	            	
 	                List<String> rowData = new ArrayList<>();
 	                for (Cell cell : row) {
 	                    rowData.add(cell.toString());

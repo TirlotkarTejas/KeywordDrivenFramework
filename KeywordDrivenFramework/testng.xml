@@ -2,9 +2,9 @@
 <suite name="AutomationSuite">
     <test name="AutomationTests">
         <classes>
-        <class name="com.keywordframework.tests.TestExecutor"/>
-            <!-- <class name="com.keywordframework.tests.TestExecutor"/> -->
-            <class name="com.keywordframework.tests.TestExecutor2"/>
+<!--          <class name="com.keywordframework.tests.TestExecutor"/>-->
+             <class name="com.keywordframework.tests.TestrunEngine"/>
+           <!-- <class name="com.keywordframework.tests.TestExecutor2"/>-->
         </classes>
     </test>
 </suite>

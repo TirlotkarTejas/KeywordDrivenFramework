@@ -1,10 +1,15 @@
 package com.keywordframework.keywords;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 
 import com.keywordframework.basetest.BaseTest;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class WebKeywords extends BaseTest{
 	
@@ -17,13 +22,13 @@ public class WebKeywords extends BaseTest{
 
 	
 //	WebDriver driver;
-//    public void openBrowser() {
-//       // System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe"); //Manual downloaded chromedriver required
-//    	WebDriverManager.chromedriver().setup();
-//        driver = new ChromeDriver();
-//        driver.manage().window().maximize();
-//        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-//    }
+    public void openBrowser() {
+       // System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe"); //Manual downloaded chromedriver required
+    	WebDriverManager.chromedriver().setup();
+        driver = new ChromeDriver();
+        driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+    }
 
     public void navigateTo(String url) {
         driver.get(url);

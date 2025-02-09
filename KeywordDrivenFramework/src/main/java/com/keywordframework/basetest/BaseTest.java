@@ -29,10 +29,10 @@ public class BaseTest {
 	        logger.info("This is loggggger");
 	        // Initialize WebDriver, ConfigReader, or any required setup
 	        // System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe"); //Manual downloaded chromedriver required
-	        WebDriverManager.chromedriver().setup();
-	        driver = new ChromeDriver();
-	        driver.manage().window().maximize();
-	        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+//	        WebDriverManager.chromedriver().setup();
+//	        driver = new ChromeDriver();
+//	        driver.manage().window().maximize();
+//	        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 	    }
 	 
 	 public static WebDriver getDriver() {
@@ -43,7 +43,7 @@ public class BaseTest {
 	    public void tearDown() {
 	        System.out.println("Closing Test Execution...");
 	        // Cleanup or close WebDriver
-	        driver.quit();
+	        //driver.quit();
 	    }
 	
 }
