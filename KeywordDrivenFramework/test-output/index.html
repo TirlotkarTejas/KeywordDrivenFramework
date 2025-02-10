@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-AutomationSuite" class="navigator-link">
-              <span class="suite-name border-passed">AutomationSuite</span>
+              <span class="suite-name border-failed">AutomationSuite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,7 +92,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">3 methods, 1 failed,   2 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-AutomationSuite" class="hide-methods failed suite-AutomationSuite"> (hide)</a> <!-- hide-methods failed suite-AutomationSuite -->
+                      <a href="#" panel-name="suite-AutomationSuite" class="show-methods failed suite-AutomationSuite"> (show)</a> <!-- show-methods failed suite-AutomationSuite -->
+                    </span>
+                    <div class="method-list-content failed suite-AutomationSuite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-AutomationSuite" title="com.keywordframework.tests.TestExecutor" class="method navigator-link" hash-for-method="TestExecutorEngine">TestExecutorEngine</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-AutomationSuite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,12 +117,12 @@
                     <div class="method-list-content passed suite-AutomationSuite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-AutomationSuite" title="com.keywordframework.tests.TestrunEngine" class="method navigator-link" hash-for-method="executeTest(TC_002, [[openBrowser, , ], [navigateTo, , https://opensource-demo.orangehrmlive.com/web/index.php/a...)">executeTest(TC_002, [[openBrowser, , ], [navigateTo, , https://opensource-demo.orangehrmlive.com/web/index.php/a...)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-AutomationSuite" title="com.keywordframework.tests.TestrunEngine" class="method navigator-link" hash-for-method="executeTest(TC_001, [[openBrowser, , ], [navigateTo, , https://opensource-demo.orangehrmlive.com/web/index.php/a...)">executeTest(TC_001, [[openBrowser, , ], [navigateTo, , https://opensource-demo.orangehrmlive.com/web/index.php/a...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-AutomationSuite" title="com.keywordframework.tests.TestrunEngine" class="method navigator-link" hash-for-method="executeTest(TC_001, [[openBrowser, , ], [navigateTo, , https://opensource-demo.orangehrmlive.com/web/index.php/a...)">executeTest(TC_001, [[openBrowser, , ], [navigateTo, , https://opensource-demo.orangehrmlive.com/web/index.php/a...)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-AutomationSuite" title="com.keywordframework.tests.TestrunEngine" class="method navigator-link" hash-for-method="executeTest(TC_002, [[openBrowser, , ], [navigateTo, , https://opensource-demo.orangehrmlive.com/web/index.php/a...)">executeTest(TC_002, [[openBrowser, , ], [navigateTo, , https://opensource-demo.orangehrmlive.com/web/index.php/a...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-AutomationSuite -->
@@ -123,6 +137,27 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-AutomationSuite" class="panel AutomationSuite">
+          <div class="suite-AutomationSuite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.keywordframework.tests.TestExecutor</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="TestExecutorEngine">
+                  </a> <!-- TestExecutorEngine -->
+                  <span class="method-name">TestExecutorEngine</span>
+                  <div class="stack-trace">java.lang.NoSuchMethodException: com.keywordframework.keywords.WebKeywords.TC_001(java.lang.String)
+	at java.base/java.lang.Class.getMethod(Class.java:2395)
+	at com.keywordframework.tests.TestExecutor.TestExecutorEngine(TestExecutor.java:51)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 25 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-AutomationSuite-class-failed -->
           <div class="suite-AutomationSuite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -131,18 +166,18 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="executeTest(TC_002, [[openBrowser, , ], [navigateTo, , https://opensource-demo.orangehrmlive.com/web/index.php/a...)">
-                  </a> <!-- executeTest(TC_002, [[openBrowser, , ], [navigateTo, , https://opensource-demo.orangehrmlive.com/web/index.php/a...) -->
-                  <span class="method-name">executeTest</span>
-                  <span class="parameters">(TC_002,[[openBrowser, , ], [navigateTo, , https://opensource-demo.orangehrmlive.com/web/index.php/auth/login], [enterText, //*[@placeholder='Username'], Admin], [enterText, //*[@placeholder='Password'], admin123], [click, //button, ], [verifyText, //span[text()='Dashboard'], Dashboard], [closeBrowser, , ]])</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
                   <a name="executeTest(TC_001, [[openBrowser, , ], [navigateTo, , https://opensource-demo.orangehrmlive.com/web/index.php/a...)">
                   </a> <!-- executeTest(TC_001, [[openBrowser, , ], [navigateTo, , https://opensource-demo.orangehrmlive.com/web/index.php/a...) -->
                   <span class="method-name">executeTest</span>
                   <span class="parameters">(TC_001,[[openBrowser, , ], [navigateTo, , https://opensource-demo.orangehrmlive.com/web/index.php/auth/login], [enterText, //*[@placeholder='Username'], Admin], [enterText, //*[@placeholder='Password'], admin123], [click, //button, ], [verifyText, //span[text()='Dashboard'], Dashboard], [closeBrowser, , ]])</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="executeTest(TC_002, [[openBrowser, , ], [navigateTo, , https://opensource-demo.orangehrmlive.com/web/index.php/a...)">
+                  </a> <!-- executeTest(TC_002, [[openBrowser, , ], [navigateTo, , https://opensource-demo.orangehrmlive.com/web/index.php/a...) -->
+                  <span class="method-name">executeTest</span>
+                  <span class="parameters">(TC_002,[[openBrowser, , ], [navigateTo, , https://opensource-demo.orangehrmlive.com/web/index.php/auth/login], [enterText, //*[@placeholder='Username'], Admin], [enterText, //*[@placeholder='Password'], admin123], [click, //button, ], [verifyText, //span[text()='Dashboard'], Dashboard], [closeBrowser, , ]])</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -159,6 +194,7 @@
 &lt;suite name=&quot;AutomationSuite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;AutomationTests&quot;&gt;
     &lt;classes&gt;
+      &lt;class name=&quot;com.keywordframework.tests.TestExecutor&quot;/&gt;
       &lt;class name=&quot;com.keywordframework.tests.TestrunEngine&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- AutomationTests --&gt;
@@ -173,7 +209,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">AutomationTests (1 class)</span>
+                <span class="test-name">AutomationTests (2 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -199,20 +235,24 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(3);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'executeTest')
 data.setCell(0, 2, 'com.keywordframework.tests.TestrunEngine')
-data.setCell(0, 3, 6844);
+data.setCell(0, 3, 7472);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'executeTest')
 data.setCell(1, 2, 'com.keywordframework.tests.TestrunEngine')
-data.setCell(1, 3, 5883);
+data.setCell(1, 3, 6709);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'TestExecutorEngine')
+data.setCell(2, 2, 'com.keywordframework.tests.TestExecutor')
+data.setCell(2, 3, 413);
 window.suiteTableData['AutomationSuite']= { tableData: data, tableDiv: 'times-div-AutomationSuite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 12 seconds</span>
+              <span class="suite-total-time">Total running time: 14 seconds</span>
               <div id="times-div-AutomationSuite">
               </div> <!-- times-div-AutomationSuite -->
             </div> <!-- times-div -->
@@ -239,22 +279,58 @@ return data;
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
               <div class="chronological-class-name">com.keywordframework.tests.TestrunEngine</div> <!-- chronological-class-name -->
+              <div class="configuration-suite before">
+                <span class="method-name">setupReport</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-suite before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.keywordframework.tests.TestExecutor</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">0 ms</span>
+                <span class="method-start">139 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">executeTest(TC_001, [[openBrowser, , ], [navigateTo, , https://opensource-demo.orangehrmlive.com/web/index.php/a...)</span>
-                <span class="method-start">387 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">executeTest(TC_002, [[openBrowser, , ], [navigateTo, , https://opensource-demo.orangehrmlive.com/web/index.php/a...)</span>
-                <span class="method-start">7233 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">TestExecutorEngine</span>
+                <span class="method-start">150 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">13118 ms</span>
+                <span class="method-start">568 ms</span>
               </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.keywordframework.tests.TestrunEngine</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">569 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-method before">
+                <span class="method-name">startTest</span>
+                <span class="method-start">601 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">executeTest(TC_001, [[openBrowser, , ], [navigateTo, , https://opensource-demo.orangehrmlive.com/web/index.php/a...)</span>
+                <span class="method-start">605 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">startTest</span>
+                <span class="method-start">8080 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">executeTest(TC_002, [[openBrowser, , ], [navigateTo, , https://opensource-demo.orangehrmlive.com/web/index.php/a...)</span>
+                <span class="method-start">8081 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">14792 ms</span>
+              </div> <!-- configuration-class after -->
+              <div class="configuration-suite after">
+                <span class="method-name">tearDownReport</span>
+                <span class="method-start">14805 ms</span>
+              </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

@@ -1,22 +1,50 @@
 package com.keywordframework.tests;
 
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+import java.util.List;
+import java.util.Map;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import com.keywordframework.basetest.BaseTest;
 import com.keywordframework.config.ConfigReader;
-import com.keywordframework.utilities.ExcelReaderGroupByMultipleTestcase;
 import com.keywordframework.keywords.WebKeywords;
-
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
-import java.util.*;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import com.keywordframework.utilities.ExcelReaderGroupByMultipleTestcase;
+import com.keywordframework.utilities.ReportManager;
 
 public class TestrunEngine extends BaseTest{
 	
 	private static final Logger logger = LogManager.getLogger(TestExecutor.class);
+	
+	 @BeforeSuite
+	    public void setupReport() {
+	        ReportManager.initializeReport();
+	        System.out.println("==========================================");
+	        System.out.println("Extent report initiated");
+	        System.out.println("==========================================");
+	    }
+	 
+//	 @BeforeTest
+//	    public void startTest() {
+//	        ReportManager.startTest("Login Test");  // ✅ Start a test before logging
+//	    }
+	 
+	 @BeforeMethod
+	 public void startTest() {
+	        ReportManager.startTest("Login Test");  // ✅ Start a test before logging
+	    }
+
+	    @AfterSuite
+	    public void tearDownReport() {
+	        ReportManager.finalizeReport();
+	    }
 
     @DataProvider(name = "testCasesProvider")
     public Object[][] getTestCases() {
