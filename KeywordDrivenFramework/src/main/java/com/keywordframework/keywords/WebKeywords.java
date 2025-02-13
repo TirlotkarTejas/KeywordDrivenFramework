@@ -8,7 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import com.keywordframework.basetest.BaseTest;
-import com.keywordframework.utilities.ReportManager;
+import com.keywordframework.reports.ReportManager;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 

@@ -1,4 +1,4 @@
-package com.keywordframework.utilities;
+package com.keywordframework.reports;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
@@ -11,7 +11,7 @@ public class ReportManager {
     private static ExtentTest test;
 
     public static void initializeReport() {
-        ExtentSparkReporter htmlReporter = new ExtentSparkReporter("reports/TestReport.html");
+        ExtentSparkReporter htmlReporter = new ExtentSparkReporter("reports/ExtentReport.html");
         extent = new ExtentReports();
         extent.attachReporter(htmlReporter);
     }
