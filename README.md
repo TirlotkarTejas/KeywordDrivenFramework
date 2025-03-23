@@ -48,7 +48,7 @@ mvn clean install
 
 ### 4️⃣ **Project Configuration**
 - Update `config.properties` with the correct browser settings.
-- Place test cases in `testdata/TestCases.xlsx`.
+- Place your test cases in `testdata/TestCases.xlsx`.
 
 ## 🚀 Running Tests
 
