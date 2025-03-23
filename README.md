@@ -1,7 +1,7 @@
 # Keyword-Driven Automation Framework
 
 ## 📌 Overview
-This project is a **Keyword-Driven Automation Framework** built using **Selenium WebDriver, TestNG, Extent Reports, and Apache POI** for test execution and reporting.
+This project is a **Keyword-Driven Automation Framework** built using **Selenium WebDriver, TestNG, Extent Reports and Apache POI** for test execution and reporting.
 
 ## 📁 Project Structure
 ```
