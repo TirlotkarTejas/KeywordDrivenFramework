@@ -17,6 +17,9 @@ public class TestExecutor extends BaseTest{
 	
 //    private static final Logger logger = LogManager.getLogger(TestExecutor.class);
 
+//    private static final Logger logger = LogManager.getLogger(TestExecutor.class);
+
+
 	
 @Test
 public void TestExecutorEngine() throws NoSuchMethodException, SecurityException, IllegalArgumentException, InvocationTargetException, IllegalAccessException{
